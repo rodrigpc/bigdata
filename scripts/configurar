@@ -1,0 +1,35 @@
+
+Passos para instalar o Ambari e o Hadoop no Ubuntu 16.04:
+
+1) Atualize suas fontes de instalação:
+   sudo apt-get update
+   sudo apt-get upgrade
+
+2) Instale o JDK
+   sudo apt-get install default-jdk
+
+3) Instale o maven
+   sudo apt-get maven
+
+4) Baixe o ambari
+   wget http://archive.apache.org/dist/ambari/ambari-2.6.2//apache-ambari-2.6.2-src.tar.gz
+
+5) Descompacte o pacote
+   tar xfvz apache-ambari-2.6.2-src.tar.gz
+
+6) Vá para o diretório criado
+   cd apache-ambari-2.6.2-src
+
+7) Faça o compile e build
+   mvn versions:set -DnewVersion=2.6.2.0.0
+
+8) Vá para o diretório ambari-metrics
+   pushd ambari-metrics
+
+9) Faça o compile e build
+   mvn versions:set -DnewVersion=2.6.2.0.0
+
+10) Vá para o diretório anterior
+    popd
+
+
